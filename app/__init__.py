@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_caching import Cache
 
 cache = Cache()
@@ -8,9 +8,9 @@ def create_app():
     app.config.from_object('app.config.Config')
     
     @app.after_request
-    async def add_dev_details(response):
+    def add_dev_details(response):
       if response.content_type == 'application/json':
-          data = await response.get_json()
+          data = response.get_json()
           data['developer_github'] = {
             "user_name": "DannyAkintunde",
             "profile_link": "https://github.com/DannyAkintunde"
