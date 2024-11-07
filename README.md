@@ -2,13 +2,17 @@
 
 Welcome to the *Text to Image API*, a simple Flask-based API that allows you to generate images from text, add text to existing images, and more. This API is designed to be easy to use and integrate into your applications.
 
- Features
+## Features
 
 - Convert text into images with customizable fonts, sizes, colors, and alignment.
 - Add text overlays to existing images.
 - Caching for improved performance.
 
- Table of Contents
+## Requirements
+- Python 3.x
+- Other depedencies in the requirements.txt
+
+### Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -20,13 +24,13 @@ Welcome to the *Text to Image API*, a simple Flask-based API that allows you to 
 - [Contributing](#contributing)
 - [License](#license)
 
- Installation
+## Installation
 
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/DannyAkintunde/TextArtify.git
-   cd text-to-image-api
+   cd TextArtify
    ```
 
 2. Create a virtual environment and activate it:
@@ -50,13 +54,13 @@ Welcome to the *Text to Image API*, a simple Flask-based API that allows you to 
 
 The API will be available at `http://127.0.0.1:5000`.
 
- Usage
+## Usage
 
 You can interact with the API using tools like Postman or cURL. Below are the available endpoints.
 
- API Endpoints
+### API Endpoints
 
- Text to Image
+#### Text to Image
 
 *Endpoint:* `/api/v1/text-to-image`  
 *Method:* `GET` or `POST`  
@@ -77,7 +81,7 @@ You can interact with the API using tools like Postman or cURL. Below are the av
 curl -X POST "http://127.0.0.1:5000/api/v1/text-to-image" -H "Content-Type: application/json" -d '{"text": "Hello World", "font": "Arial"}'
 ```
 
- Add Text to Image
+#### Add Text to Image
 
 *Endpoint:* `/api/v1/add-text-to-img`  
 *Method:* `POST`  
@@ -100,11 +104,16 @@ curl -X POST "http://127.0.0.1:5000/api/v1/add-text-to-img" -H "Content-Type: ap
 
 Logging is configured to log messages at the INFO level. Errors and warnings are logged appropriately to help with debugging.
 
- Contributing
+## Deploy
+Deploy your personal TextArtify server for more control.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDannyAkintunde%2FTextArtify&project-name=text-to-image&repository-name=TextArtify&demo-title=TextArtify&demo-description=TextArtify%20api%20demo&demo-url=https%3A%2F%2Ftext-artify-seven.vercel.app&demo-image=https%3A%2F%2Fi.ibb.co%2F5jJpc7T%2Ftext-to-image.png)
+
+## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
- License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
