@@ -2,9 +2,17 @@ from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 import re
 import requests
+import random
 import tempfile
+import string
 from urllib.parse import urlparse
 from . import config
+
+
+def generate_secure_random_string(length=10):
+    characters = string.ascii_letters + string.digits
+    secure_random_string = ''.join(random.choice(characters) for _ in range(length))
+    return secure_random_string
 
 def is_valid_url(url):
     parsed_url = urlparse(url)

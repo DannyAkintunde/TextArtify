@@ -1,8 +1,8 @@
 import os
-import secrets
+from app.utils import generate_secure_random_string
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or  secrets.token_hex(16)
+    SECRET_KEY = os.environ.get('SECRET_KEY') or  generate_secure_random_string(16)
     
     DEBUG = True
     
