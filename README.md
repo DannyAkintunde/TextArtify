@@ -84,7 +84,7 @@ curl -X POST "http://127.0.0.1:5000/api/v1/text-to-image" -H "Content-Type: appl
 #### Add Text to Image
 
 *Endpoint:* `/api/v1/add-text-to-img`  
-*Method:* `POST`  
+*Method:* `GET` or `POST`  
 *Parameters:*
 - `text` (required): The text to overlay on the image.
 - `bg` (required): URL of the background image.
