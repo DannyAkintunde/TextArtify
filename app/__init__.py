@@ -19,11 +19,11 @@ def create_app():
     
       return response
       
-      cache.init_app(app)
-      
-      from app import routes
-      
-      app.register_blueprint(routes.bp)
-      app.register_blueprint(routes.v1, url_prefix='/api/v1')
-      
-      return app
+    cache.init_app(app)
+    
+    from app import routes
+    
+    app.register_blueprint(routes.bp)
+    app.register_blueprint(routes.v1, url_prefix='/api/v1')
+    
+    return app
