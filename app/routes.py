@@ -146,19 +146,21 @@ def add_text_to_image():
         return jsonify({"error": "Failed to create image"}), 500
 
 
-i = 0
-print(i)
+i = 0  
+
 @bp.route('/test-img')
 def test():
-    ext = request.args.get('ext')
-    if ext not in ('png', 'jpg'):
-       return 'error', 400
-    
-    exts =  ('png', 'jpg')
     global i
-    print(i)
-    i += 1 
-    if i > 2:
-      i = 0
-    
-    return send_file("../static/test.{}".format(exts[i-1]))
+    ext = request.args.get('ext') 
+    exts = ('png', 'jpg')
+
+    if ext and ext not in exts:
+        return 'error', 400 
+
+    if not ext:
+        i += 1 
+        if i > 2:
+            i = 0
+        ext = exts[i - 1]
+
+    return send_file(f"../static/test.{ext}")
