@@ -1,8 +1,8 @@
 import os
-# import secrets
+import secrets
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'auyguyfu6fxko66ddrjcturxh6tutjif' # secrets.token_hex(16)
+    SECRET_KEY = os.environ.get('SECRET_KEY') or  secrets.token_hex(16)
     
     DEBUG = True
     
