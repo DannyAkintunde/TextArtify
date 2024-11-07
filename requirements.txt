@@ -8,4 +8,3 @@ Jinja2==3.1.4
 MarkupSafe==3.0.2
 pillow==11.0.0
 Werkzeug==3.1.2
-secrets==1.0.2
