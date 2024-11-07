@@ -87,7 +87,7 @@ def text_to_image():
         logger.error(f"Error creating image: {e}")
         return jsonify({"error": "Failed to create image"}), 500
 
-@v1.route('/add-text-to-img')
+@v1.route('/add-text-to-img', methods=['GET', 'POST'])
 def add_text_to_image():
     data = request.get_json() if request.method == 'POST' else {}
     
