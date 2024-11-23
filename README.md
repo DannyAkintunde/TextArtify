@@ -78,7 +78,7 @@ You can interact with the API using tools like Postman or cURL. Below are the av
 *Example Request:*
 
 ```bash
-curl -X POST "http://127.0.0.1:5000/api/v1/text-to-image" -H "Content-Type: application/json" -d '{"text": "Hello World", "font": "Arial"}'
+curl -X POST "http://127.0.0.1:5000/api/v1/text-to-image" -H "Content-Type: application/json" -d '{"text": "Hello World", "font": "Arial"}' -o out.png
 ```
 
 #### Add Text to Image
