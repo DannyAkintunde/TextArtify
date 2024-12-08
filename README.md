@@ -2,6 +2,9 @@
 
 Welcome to the *Text to Image API*, a simple Flask-based API that allows you to generate images from text, add text to existing images, and more. This API is designed to be easy to use and integrate into your applications.
 
+> [!NOTE]
+> if you want to integrate this api into you personal or commercial projects I'll recommend you deploy the api rather than use e publicly available one.
+
 ## Features
 
 - Convert text into images with customizable fonts, sizes, colors, and alignment.
@@ -118,5 +121,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-## ⚠️ Disclamer
-if you want to integrate this api into you personal or commercial projects I'll recommend you deploy the api rather than use e publicly available one.
