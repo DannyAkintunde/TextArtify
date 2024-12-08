@@ -46,7 +46,9 @@ def text_to_image():
         return jsonify({"error": "Invalid text_align value make sure you specify one of the following center, right, left."}), 400
     
     font_path = utils.get_font(fonts, font)
+    
     if not font_path:
+        font_path = ""
         logger.warning("Font not found, using default font")
 
     # Create a unique cache key based on input parameters
@@ -65,7 +67,7 @@ def text_to_image():
             text,
             utils.hex_to_rgba(text_color),
             utils.hex_to_rgba(bg_color),
-            font_path,
+            str(font_path),
             int(font_size),
             min_size=min_size,
             max_size=max_size,

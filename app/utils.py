@@ -109,12 +109,13 @@ def get_font(fonts, font):
     Get font from font path list
     Returns: Path
     """
-    fonts = list(filter(lambda f: f.stem == font, fonts))
+    font = font or ""
+    fonts = list(filter(lambda f: f.stem.lower() == font.lower(), fonts))
     
     if len(fonts) > 0:
         return fonts[0]
     
-    return fonts
+    return None
 
 def create_image_with_text(text, color, bg_color, font_path=None, font_size=150, min_size=None, max_size=None, padding_ratio=0.1, alignment='center'):
     """Generate an image with wrapped text."""
