@@ -23,6 +23,7 @@ Welcome to the *Text to Image API*, a simple Flask-based API that allows you to 
   - [Text to Image](#text-to-image)
   - [Add Text to Image](#add-text-to-image)
   - [Test Image](#test-image)
+- [Fonts](#Fonts)
 - [Logging](#logging)
 - [Contributing](#contributing)
 - [License](#license)
@@ -102,6 +103,13 @@ curl -X POST "http://127.0.0.1:5000/api/v1/text-to-image" -H "Content-Type: appl
 ```bash
 curl -X POST "http://127.0.0.1:5000/api/v1/add-text-to-img" -H "Content-Type: application/json" -d '{"text": "Sample Text", "bg": "https://example.com/image.jpg"}'
 ```
+
+## Fonts
+These are the currently supported fonts
+-
+-
+-
+to use any of this fonts just add it to the font param in your request
 
  Logging
 
