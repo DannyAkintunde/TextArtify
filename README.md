@@ -121,7 +121,8 @@ These are the currently supported fonts
     -   arimo-semibold
     -   arimo-semibold-italic
 -   arizonia - arizonia-regular
-    to use any of this fonts just add it to the font param in your request
+
+to use any of this fonts just add it to the font param in your request
 
 ### Example:
 
