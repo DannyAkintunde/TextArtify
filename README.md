@@ -120,11 +120,12 @@ These are the currently supported fonts
     -   arimo-medium-italic
     -   arimo-semibold
     -   arimo-semibold-italic
--   arizonia - arizonia-regular
+-   arizonia 
+    - arizonia-regular
 
 to use any of this fonts just add it to the font param in your request
 
-### Example:
+_Example Request:_
 
 ```bash
 curl -X POST "http://127.0.0.1:5000/api/v1/text-to-image" -H "Content-Type: application/json" -d '{"text": "Hello World", "font": "arizonia-regular"}' -o out.png
